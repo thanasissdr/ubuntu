@@ -2,7 +2,7 @@
 1. Install multipass
 2. > Make sure that `multipassd.exe, multipass.exe, svchost.exe` are in the firewall exception list, otherwise there might be problems when trying to log into the instance.
 ```cmd
-multipass launch 18.04 --name microk8s-vm --mem 8G --cpus 3 --disk 50G
+multipass launch 18.04 --name microk8s-vm --mem 12G --cpus 4 --disk 50G
 ```
 
 Make sure that the instance has a proper `IPv4` address when 
@@ -14,7 +14,7 @@ By default the location where the instances are saved is:
 `C:\Windows\System32\config\systemprofile\AppData\Roaming\multipassd\vault`
 ## Connection
 ```cmd
-multipass shell microk8s
+multipass shell microk8s-vm
 ```
 
 ## Connection through `ssh`
@@ -47,5 +47,5 @@ ssh -i ~/.ssh/id_rsa ubuntu@172.18.42.97
 ```
 or
 ```
-ssh microk8s-vm-server
+ssh microk8s-vm
 ```
